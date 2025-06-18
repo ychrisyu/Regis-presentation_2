@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>瑞吉教育 | 幼小衔接家长发布会</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold-primary: #D4AF37;
+            --gold-secondary: #B8860B;
+            --gold-light: #F5D76E;
+            --dark-gray: #2C2C2C;
+            --navy-blue: #0A2E5C;
+            --ivory: #F8F5F0;
+            --amber: #FF9A00;
+            --gold-gradient: linear-gradient(135deg, #D4AF37 0%, #F5D76E 100%);
+            --gold-hover: linear-gradient(135deg, #C19D34 0%, #E5C35D 100%);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: var(--ivory);
+            color: var(--dark-gray);
+            font-family: 'Lato', 'Microsoft YaHei', sans-serif;
+            line-height: 1.8;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 10% 20%, rgba(212, 175, 55, 0.05) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 20%);
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .gold-divider {
+            height: 3px;
+            background: var(--gold-gradient);
+            width: 80%;
+            margin: 20px auto;
+            border-radius: 3px;
+            box-shadow: 0 2px 5px rgba(180, 140, 70, 0.3);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            background: var(--navy-blue);
+            color: var(--ivory);
+            border-radius: 0 0 50px 50px;
+            margin-bottom: 60px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(10, 46, 92, 0.3);
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 Q50,30 100,0 L100,100 Q50,70 0,100 Z" fill="rgba(212, 175, 55, 0.1)"/></svg>');
+            background-size: 100% 100%;
+            opacity: 0.5;
+        }
+        
+        .logo {
+            width: 150px;
+            height: 150px;
+            background: var(--gold-gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            box-shadow: 0 10px 30px rgba(180, 140, 70, 0.5);
+            animation: float 6s ease-in-out infinite, pulse-gold 3s infinite;
+            position: relative;
+            overflow: hidden;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .logo::after {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.3) 50%, transparent 70%);
+            animation: shine 4s infinite;
+        }
+        
+        .logo i {
+            font-size: 70px;
+            color: var(--ivory);
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        
+        h1 {
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+            color: var(--gold-light);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            letter-spacing: 1px;
+            animation: fadeInDown 1s ease-out;
+        }
+        
+        .subtitle {
+            font-size: 1.6rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            color: rgba(248, 245, 240, 0.9);
+            animation: fadeInUp 1s ease-out 0.3s forwards;
+            opacity: 0;
+        }
+        
+        .theme {
+            background: rgba(212, 175, 55, 0.3);
+            display: inline-block;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 20px;
+            backdrop-filter: blur(5px);
+            border: 2px solid rgba(212, 175, 55, 0.5);
+            color: var(--ivory);
+            animation: scaleIn 0.8s ease-out 0.6s forwards;
+            transform: scale(0);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .content-card {
+            background: var(--ivory);
+            border-radius: 25px;
+            padding: 45px;
+            margin-bottom: 60px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(184, 134, 11, 0.3);
+            animation: fadeInUp 1s ease-out 0.8s forwards;
+            opacity: 0;
+        }
+        
+        .content-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gold-gradient);
+        }
+        
+        .content-card h2 {
+            color: var(--navy-blue);
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid var(--gold-primary);
+            font-size: 2.2rem;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        
+        .content-card h2 i {
+            margin-right: 20px;
+            background: var(--gold-gradient);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--ivory);
+            font-size: 28px;
+            box-shadow: 0 5px 15px rgba(180, 140, 70, 0.4);
+        }
+        
+        .intro {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            color: var(--dark-gray);
+            line-height: 1.9;
+            background: rgba(248, 245, 240, 0.7);
+            padding: 30px;
+            border-radius: 20px;
+            border-left: 4px solid var(--gold-primary);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+            animation: fadeIn 1s ease-out 1s forwards;
+            opacity: 0;
+        }
+        
+        .tools-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+        
+        .tool-card {
+            background: var(--ivory);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 2px solid rgba(184, 134, 11, 0.2);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        .tool-card:nth-child(1) {
+            animation-delay: 1.2s;
+        }
+        
+        .tool-card:nth-child(2) {
+            animation-delay: 1.4s;
+        }
+        
+        .tool-card:nth-child(3) {
+            animation-delay: 1.6s;
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-15px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            border-color: var(--gold-primary);
+        }
+        
+        .tool-card::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gold-gradient);
+        }
+        
+        .tool-icon {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 42px;
+            color: var(--ivory);
+            background: var(--gold-gradient);
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 8px 20px rgba(180, 140, 70, 0.5);
+            transition: all 0.5s ease;
+        }
+        
+        .tool-card:hover .tool-icon {
+            transform: scale(1.1) rotate(10deg);
+            box-shadow: 0 12px 30px rgba(180, 140, 70, 0.7);
+        }
+        
+        .tool-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            color: var(--navy-blue);
+        }
+        
+        .tool-card p {
+            color: var(--dark-gray);
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .highlight {
+            background: linear-gradient(to right, rgba(212, 175, 55, 0.2), transparent);
+            padding: 3px 10px;
+            border-radius: 5px;
+            font-weight: 600;
+            color: var(--navy-blue);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .highlight::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--gold-primary);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .tool-card:hover .highlight::after {
+            transform: scaleX(1);
+        }
+        
+        .problem-section {
+            background: rgba(255, 154, 0, 0.1);
+            border-left: 4px solid var(--amber);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+            animation: fadeIn 1s ease-out 1.8s forwards;
+            opacity: 0;
+        }
+        
+        .solution-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin: 50px 0;
+        }
+        
+        .solution-card {
+            background: var(--ivory);
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border-top: 5px solid;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        .solution-card:nth-child(1) {
+            border-top-color: var(--gold-primary);
+            animation-delay: 2s;
+        }
+        
+        .solution-card:nth-child(2) {
+            border-top-color: var(--navy-blue);
+            animation-delay: 2.2s;
+        }
+        
+        .solution-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .solution-card h3 {
+            font-size: 1.7rem;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            color: var(--navy-blue);
+        }
+        
+        .solution-card h3 i {
+            margin-right: 15px;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--ivory);
+            font-size: 20px;
+            background: var(--gold-gradient);
+            box-shadow: 0 5px 15px rgba(180, 140, 70, 0.4);
+        }
+        
+        .solution-card ul {
+            padding-left: 30px;
+            margin: 25px 0;
+        }
+        
+        .solution-card li {
+            margin-bottom: 15px;
+            position: relative;
+            font-size: 1.1rem;
+            color: var(--dark-gray);
+        }
+        
+        .solution-card li::before {
+            content: "★";
+            position: absolute;
+            left: -30px;
+            top: 0;
+            color: var(--gold-primary);
+            font-size: 18px;
+        }
+        
+        .subject-section {
+            margin: 70px 0;
+            animation: fadeIn 1s ease-out 2.4s forwards;
+            opacity: 0;
+        }
+        
+        .subject-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid var(--gold-primary);
+        }
+        
+        .subject-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 25px;
+            font-size: 36px;
+            color: var(--ivory);
+            background: var(--gold-gradient);
+            box-shadow: 0 8px 20px rgba(180, 140, 70, 0.5);
+            animation: pulse 2s infinite;
+        }
+        
+        .subject-header h2 {
+            font-size: 2.2rem;
+            color: var(--navy-blue);
+        }
+        
+        .table-container {
+            overflow-x: auto;
+            margin: 40px 0;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--ivory);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        
+        th {
+            background: var(--navy-blue);
+            color: var(--ivory);
+            padding: 18px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        
+        td {
+            padding: 16px;
+            border: 1px solid rgba(184, 134, 11, 0.2);
+            text-align: center;
+            color: var(--dark-gray);
+        }
+        
+        tr:nth-child(even) {
+            background: rgba(212, 175, 55, 0.05);
+        }
+        
+        .layer-model {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 50px 0;
+        }
+        
+        .layer-card {
+            background: var(--ivory);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            border-top: 5px solid;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        .layer-card:nth-child(1) {
+            animation-delay: 2.6s;
+            border-top-color: var(--gold-primary);
+        }
+        
+        .layer-card:nth-child(2) {
+            animation-delay: 2.8s;
+            border-top-color: var(--navy-blue);
+        }
+        
+        .layer-card:nth-child(3) {
+            animation-delay: 3.0s;
+            border-top-color: var(--amber);
+        }
+        
+        .layer-card:nth-child(4) {
+            animation-delay: 3.2s;
+            border-top-color: var(--gold-secondary);
+        }
+        
+        .layer-card:hover {
+            transform: translateY(-15px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .layer-card h4 {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            color: var(--navy-blue);
+        }
+        
+        .layer-card p {
+            color: var(--dark-gray);
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+        
+        .english-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+        
+        .english-card {
+            background: var(--ivory);
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border-top: 5px solid var(--gold-primary);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        .english-card:nth-child(1) {
+            animation-delay: 3.4s;
+        }
+        
+        .english-card:nth-child(2) {
+            animation-delay: 3.6s;
+            border-top-color: var(--navy-blue);
+        }
+        
+        .english-card:hover {
+            transform: translateY(-15px) scale(1.03);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .english-card h3 {
+            font-size: 1.7rem;
+            margin-bottom: 25px;
+            color: var(--navy-blue);
+            display: flex;
+            align-items: center;
+        }
+        
+        .english-card h3 i {
+            margin-right: 15px;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--ivory);
+            background: var(--gold-gradient);
+            font-size: 20px;
+            box-shadow: 0 5px 15px rgba(180, 140, 70, 0.4);
+        }
+        
+        .english-card p {
+            color: var(--dark-gray);
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+        
+        .conclusion {
+            background: linear-gradient(135deg, var(--navy-blue), #1a3c75);
+            color: var(--ivory);
+            padding: 70px 50px;
+            border-radius: 30px;
+            text-align: center;
+            margin: 80px 0 60px;
+            box-shadow: 0 20px 50px rgba(10, 46, 92, 0.5);
+            position: relative;
+            overflow: hidden;
+            animation: fadeIn 1s ease-out 3.8s forwards;
+            opacity: 0;
+        }
+        
+        .conclusion::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 Q50,30 100,0 L100,100 Q50,70 0,100 Z" fill="rgba(212, 175, 55, 0.1)"/></svg>');
+            background-size: 100% 100%;
+            opacity: 0.3;
+        }
+        
+        .conclusion h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: var(--gold-light);
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        
+        .conclusion p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.3rem;
+            line-height: 1.9;
+            font-size: 1.2rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: var(--amber);
+            background: var(--gold-gradient);
+            color: var(--ivory);
+            padding: 22px 60px;
+            border-radius: 60px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 40px;
+            box-shadow: 0 10px 30px rgba(180, 140, 70, 0.6);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            border: 3px solid rgba(255, 255, 255, 0.5);
+            animation: pulse 2s infinite, float 4s ease-in-out infinite;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+            letter-spacing: 1px;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-10px) scale(1.1);
+            box-shadow: 0 15px 40px rgba(180, 140, 70, 0.8);
+            background: var(--gold-hover);
+        }
+        
+        .cta-button::after {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: rotate(30deg);
+            transition: all 0.8s ease;
+        }
+        
+        .cta-button:hover::after {
+            transform: rotate(30deg) translate(20%, 20%);
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(5px);
+        }
+        
+        .modal-content {
+            background: var(--ivory);
+            border-radius: 30px;
+            padding: 50px;
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+            animation: popIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 3px solid var(--gold-primary);
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--gold-primary);
+            transition: all 0.3s ease;
+        }
+        
+        .close-modal:hover {
+            transform: scale(1.2) rotate(90deg);
+            color: var(--amber);
+        }
+        
+        .modal h2 {
+            color: var(--navy-blue);
+            margin-bottom: 30px;
+            font-size: 2.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal h2 i {
+            margin-right: 15px;
+            color: var(--gold-primary);
+        }
+        
+        .form-group {
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 12px;
+            font-weight: bold;
+            color: var(--navy-blue);
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .form-group label i {
+            margin-right: 10px;
+            color: var(--gold-primary);
+            font-size: 1.3rem;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 18px 20px;
+            border: 2px solid var(--gold-secondary);
+            border-radius: 15px;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            background: rgba(248, 245, 240, 0.7);
+        }
+        
+        .form-group input:focus {
+            border-color: var(--gold-primary);
+            box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.3);
+            outline: none;
+            background: white;
+        }
+        
+        .submit-btn {
+            background: var(--gold-gradient);
+            color: var(--ivory);
+            border: none;
+            padding: 18px 50px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            display: inline-block;
+            margin-top: 20px;
+            box-shadow: 0 8px 20px rgba(180, 140, 70, 0.5);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 12px 25px rgba(180, 140, 70, 0.7);
+            background: var(--gold-hover);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 30px;
+            color: var(--dark-gray);
+            font-size: 1.1rem;
+            border-top: 1px solid rgba(184, 134, 11, 0.3);
+            margin-top: 40px;
+        }
+        
+        footer p {
+            margin: 10px 0;
+        }
+        
+        /* Animations */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        @keyframes pulse-gold {
+            0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); }
+            70% { box-shadow: 0 0 0 20px rgba(212, 175, 55, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+        }
+        
+        @keyframes shine {
+            0% { transform: translateX(-100%) rotate(30deg); }
+            100% { transform: translateX(100%) rotate(30deg); }
+        }
+        
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes scaleIn {
+            from { transform: scale(0); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        
+        @keyframes popIn {
+            0% { transform: scale(0.7); opacity: 0; }
+            70% { transform: scale(1.1); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        @media (max-width: 768px) {
+            .tools-container, .solution-cards, .layer-model, .english-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2.4rem;
+            }
+            
+            .subtitle {
+                font-size: 1.3rem;
+            }
+            
+            .theme {
+                font-size: 1.2rem;
+                padding: 12px 30px;
+            }
+            
+            .content-card {
+                padding: 30px 20px;
+            }
+            
+            .conclusion {
+                padding: 40px 20px;
+            }
+            
+            .modal-content {
+                padding: 30px 20px;
+            }
+            
+            .cta-button {
+                padding: 18px 40px;
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h1>瑞吉教育家长发布会</h1>
+            <p class="subtitle">让过去所学真正"活"起来，为成长筑牢"向下扎根，向上生长"根基</p>
+            <div class="theme">幼小衔接暑期解决方案</div>
+        </header>
+        
+        <div class="content-card">
+            <h2><i class="fas fa-microphone-alt"></i> 尊敬的各位家长</h2>
+            <p class="intro">晚上好！首先非常感谢大家今天的出席。我是瑞吉小学部的小爱老师。今天我们一起来聊一下，站在幼儿园毕业到小学一年级的路口，未来的2-3个月期间孩子和整个家庭都将面临一个全新的小学课程安排和时间表，应该怎么去重新安排孩子的一天？暑假期间我们又能做些什么去帮助孩子过渡呢？</p>
+            
+            <div class="gold-divider"></div>
+            
+            <h3 style="color: var(--navy-blue); margin-bottom: 30px; display: flex; align-items: center; font-size: 1.8rem;">
+                <i class="fas fa-lightbulb" style="background: var(--gold-gradient); color: var(--ivory); margin-right: 15px; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center;"></i>
+                答案就在这些工具中
+            </h3>
+            
+            <div class="tools-container">
+                <div class="tool-card" id="tool1">
+                    <div class="tool-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>电子计时器</h3>
+                    <p>教会孩子把<span class="highlight">"写作业好累"</span>变成<span class="highlight">"先专注30分钟，再休息10分钟"</span>的清晰目标</p>
+                </div>
+                
+                <div class="tool-card" id="tool2">
+                    <div class="tool-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>错题本</h3>
+                    <p>记录的不是错误，而是孩子从<span class="highlight">"这道题又错了"</span>到<span class="highlight">"举一反三"</span>的蜕变</p>
+                </div>
+                
+                <div class="tool-card" id="tool3">
+                    <div class="tool-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>习惯养成表</h3>
+                    <p>上面贴满的星星贴纸，正在把<span class="highlight">"妈妈催我学"</span>变成<span class="highlight">"我自己想打卡"</span>的主动自觉</p>
+                </div>
+            </div>
+            
+            <div style="background: rgba(212, 175, 55, 0.1); padding: 30px; border-radius: 20px; margin: 50px 0; border-left: 4px solid var(--gold-primary);">
+                <h3 style="color: var(--navy-blue); margin-bottom: 25px; display: flex; align-items: center; font-size: 1.7rem;">
+                    <i class="fas fa-gem" style="background: var(--gold-gradient); color: var(--ivory); margin-right: 15px; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center;"></i>
+                    幼小衔接的核心真相
+                </h3>
+                <p style="font-size: 1.2rem; line-height: 1.9;">
+                    这些工具揭示了一个真相：幼小衔接的核心，是帮助孩子完成从<span class="highlight">"被照顾者"</span>到<span class="highlight">"自主管理者"</span>的角色蜕变。孩子根据计时器的数字来控制自己的任务完成时间、用错题本来归纳和总结经验、借助习惯养成表来激励自己进步，这些都是帮助孩子在自己管理自己。
+                </p>
+            </div>
+            
+            <div class="problem-section">
+                <h3 style="color: var(--navy-blue); margin-bottom: 25px; display: flex; align-items: center; font-size: 1.7rem;">
+                    <i class="fas fa-exclamation-triangle" style="color: var(--amber); margin-right: 15px;"></i>
+                    但工具就足够了吗？
+                </h3>
+                <p style="font-size: 1.2rem; line-height: 1.9;">
+                    那些花花绿绿的计时器、卡通版的任务打卡表，或许能让孩子在头三天眼睛发亮地喊"我要自己安排时间"，可到了第四天，当新鲜劲儿一过，计时器大概率会被丢进抽屉吃灰，任务清单也只会沦为家长手机里的"电子废纸"。更让人揪心的是，暑假整整两个月，没了规律的在校节奏，孩子早上赖床到十点，下午抱着平板刷动画，握笔的手慢慢生了疏，整整幼儿园最后一年班主任给孩子交教会的拼音、加减法、自然拼读、书写习惯等都还给了老师......不正是咱们最担心的<span class="highlight">"暑假滑坡"</span>吗？
+                </p>
+            </div>
+            
+            <div style="text-align: center; margin: 50px 0;">
+                <h3 style="font-size: 1.7rem; color: var(--ivory); background: var(--navy-blue); display: inline-block; padding: 20px 50px; border-radius: 60px; border: 3px solid var(--gold-primary); box-shadow: 0 10px 30px rgba(10, 46, 92, 0.4);">
+                    <i class="fas fa-question-circle" style="margin-right: 10px; color: var(--gold-light);"></i>
+                    既然工具撑不起真正的成长，总不能眼睁睁看着孩子在暑假两个月里"退步回原点"吧？
+                </h3>
+            </div>
+            
+            <h2 style="color: var(--navy-blue); margin: 60px 0 40px; text-align: center; font-size: 2rem;">
+                <i class="fas fa-check-circle" style="color: var(--gold-primary); margin-right: 15px;"></i>
+                幼小衔接要帮孩子真正"长本事"
+            </h2>
+            
+            <div class="solution-cards">
+                <div class="solution-card">
+                    <h3><i class="fas fa-ruler-combined"></i> 1. 有规律的习惯锻造</h3>
+                    <p>在家中每天按照小学的课程表时间来规划每天的暑假作息，尤其是40分钟的不间断课堂学习时间，重点落实三方面：</p>
+                    <ul>
+                        <li><strong>作息规律化：</strong>参考小学作息调整起床、学习、休息时间，避免开学后精神涣散</li>
+                        <li><strong>40分钟专注力训练：</strong>通过定时阅读、拼图或棋类游戏，逐步延长专注时长，减少外界干扰</li>
+                        <li><strong>自理能力强化：</strong>独立整理书包、管理学习用品，提前适应课间自主如厕、喝水等需求</li>
+                    </ul>
+                </div>
+                
+                <div class="solution-card">
+                    <h3><i class="fas fa-brain"></i> 2. 知识灵活运用</h3>
+                    <p>针对本学期老师所教的幼小衔接知识点进行分类和复习，并通过趣味游戏或生活场景强化记忆：</p>
+                    <ul>
+                        <li>购物时认字、分水果学计算等生活场景应用</li>
+                        <li>激发孩子的学习兴趣和自驱力</li>
+                        <li>培养能陪孩子走得更远的底层能力</li>
+                    </ul>
+                    <div style="background: rgba(212, 175, 55, 0.1); padding: 25px; border-radius: 15px; margin-top: 25px; border-left: 4px solid var(--gold-primary);">
+                        <p style="font-style: italic; color: var(--navy-blue); font-weight: 500; font-size: 1.1rem;">
+                            "这才是瑞吉幼小衔接暑假班的初心。我们不做'临时抱佛脚'的冲刺班，而是用暑假50天的时间，帮助孩子将幼儿园的已学知识进行转化，真正实现'向下扎根，向上生长'的长期目标。"
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin: 60px 0 40px; padding: 40px; background: rgba(10, 46, 92, 0.05); border-radius: 20px; border: 2px solid rgba(184, 134, 11, 0.3); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);">
+                <h3 style="font-size: 1.8rem; color: var(--navy-blue); margin-bottom: 30px;">
+                    <i class="fas fa-gem" style="color: var(--gold-primary);"></i>
+                    30年教育实践验证的真相
+                </h3>
+                <p style="font-size: 2rem; color: var(--navy-blue); font-weight: bold; line-height: 1.4;">
+                    小学一年级淘汰的不是知识储备，而是三个底层能力的较量：<br>
+                    <span style="color: var(--gold-primary);">"坐得住"的专注力</span> · 
+                    <span style="color: var(--navy-blue);">"管得住"的自控力</span> · 
+                    <span style="color: var(--amber);">"学得会"的运用力</span>
+                </p>
+            </div>
+        </div>
+        
+        <div class="subject-section chinese">
+            <div class="subject-header">
+                <div class="subject-icon">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <h2>语文能力四维提升</h2>
+            </div>
+            
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>输入/输出维度</th>
+                            <th>听</th>
+                            <th>说</th>
+                            <th>读</th>
+                            <th>写</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>一个字</strong></td>
+                            <td>声调发音（单字发音辨析）</td>
+                            <td>组词造句（机械组词）</td>
+                            <td>拼音（字、词）</td>
+                            <td>汉字结构格式书写（认读）</td>
+                        </tr>
+                        <tr>
+                            <td><strong>一张图</strong></td>
+                            <td>看图听故事（图片辅助故事倾听）</td>
+                            <td>描述图片沟通会话（完成描述图片）</td>
+                            <td>图片要素分解图片情景联想（句）</td>
+                            <td>描红（再模仿）</td>
+                        </tr>
+                        <tr>
+                            <td><strong>一段话</strong></td>
+                            <td>听觉专注解析记忆（段落细节捕捉）</td>
+                            <td>信息补全语言组织（故事接龙复述）</td>
+                            <td>语法符号概括复述（段）</td>
+                            <td>语法符号书写短句（后创造）</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="subject-section math">
+            <div class="subject-header">
+                <div class="subject-icon">
+                    <i class="fas fa-calculator"></i>
+                </div>
+                <h2>数学四层能力模型</h2>
+            </div>
+            
+            <div class="layer-model">
+                <div class="layer-card">
+                    <h4>第一层：知识点基础</h4>
+                    <p>掌握基本运算和概念（如20以内加减法、图形识别）</p>
+                </div>
+                <div class="layer-card">
+                    <h4>第二层：经验规律的总结</h4>
+                    <p>学会归纳规律（如"加法交换律""乘法分配律"的总结）</p>
+                </div>
+                <div class="layer-card">
+                    <h4>第三层：知识应用与深化</h4>
+                    <p>举一反三（如用"画线段图"解决不同类型的应用题）</p>
+                </div>
+                <div class="layer-card">
+                    <h4>第四层：举一反三善变通</h4>
+                    <p>融会贯通（用数学思维解决生活问题，比如"如何用最少的钱买文具"）</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="subject-section english">
+            <div class="subject-header">
+                <div class="subject-icon">
+                    <i class="fas fa-language"></i>
+                </div>
+                <h2>英语课程两大升级</h2>
+            </div>
+            
+            <div class="english-cards">
+                <div class="english-card">
+                    <h3><i class="fas fa-theater-masks"></i> 场景化互动教学</h3>
+                    <p>继续沿用广受家长认可的《国家地理Look》教材，但更注重"情景还原"——比如围绕"餐厅点餐""公园游玩""校园生活"等真实场景主题，设计角色扮演、小组对话、情景短剧等活动，让孩子在"用英语解决问题"的过程中自然输出。</p>
+                </div>
+                
+                <div class="english-card">
+                    <h3><i class="fas fa-layer-group"></i> 分层能力锚定</h3>
+                    <p>依据孩子现有水平动态分阶（基础夯实/能力跃升），针对性强化"听-说-应"链路——基础组通过高频词句跟读、情景问答的框架，进阶组则融入思维导图复述、创意故事编演，重点培养"信息抓取-逻辑重组-观点输出"的语言内化能力，让每个孩子都能在适配的节奏中实现"听得懂、接得上、说得出"。</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="conclusion">
+            <h2>50天很短，但足够让改变发生</h2>
+            <p>
+                这个暑假，瑞吉会成为孩子成长路上的"脚手架"——不是替您"盯着孩子吃饭睡觉"，而是用30年沉淀的教育智慧和这3年间对孩子的了解，帮孩子从"被照顾"变成"我能行"；不是用工具硬撑"假自律"，而是通过小班精品的精准陪伴，让习惯成自然、知识真正"活"起来。
+            </p>
+            <a href="#" class="cta-button" id="ctaBtn">立即预约暑期班名额</a>
+        </div>
+        
+        <footer>
+            <p>© 2025 瑞吉教育 - 专业幼小衔接教育机构 | 咨询电话：400-123-4567</p>
+            <p>地址：上海市浦东新区教育路88号瑞吉教育中心 | 官网：www.ruiji-edu.com</p>
+        </footer>
+    </div>
+    
+    <!-- 预约模态框 -->
+    <div class="modal" id="bookingModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <h2><i class="fas fa-calendar-check"></i> 预约暑期班名额</h2>
+            <p style="margin-bottom: 30px; color: var(--dark-gray); font-size: 1.1rem;">填写以下信息，我们的顾问老师会尽快与您联系</p>
+            
+            <div class="form-group">
+                <label for="name"><i class="fas fa-user"></i> 怎么称呼您？</label>
+                <input type="text" id="name" placeholder="请输入您的姓名">
+            </div>
+            
+            <div class="form-group">
+                <label for="phone"><i class="fas fa-mobile-alt"></i> 您的手机号</label>
+                <input type="tel" id="phone" placeholder="请输入您的手机号码">
+            </div>
+            
+            <button class="submit-btn">立即预约</button>
+            
+            <p style="margin-top: 30px; color: var(--dark-gray); font-size: 0.9rem; font-style: italic;">
+                <i class="fas fa-lock" style="color: var(--gold-primary); margin-right: 5px;"></i>
+                您的信息安全受保护，我们不会泄露给第三方
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // 预约按钮功能
+        const ctaBtn = document.getElementById('ctaBtn');
+        const modal = document.getElementById('bookingModal');
+        const closeModal = document.getElementById('closeModal');
+        
+        ctaBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        });
+        
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+        
+        // 点击模态框外部关闭
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // 工具卡片点击效果
+        document.querySelectorAll('.tool-card').forEach(card => {
+            card.addEventListener('click', function() {
+                this.style.transform = 'scale(0.9)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 300);
+            });
+        });
+        
+        // 页面加载时添加动画类
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(() => {
+                document.querySelector('.theme').classList.add('pulse');
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
