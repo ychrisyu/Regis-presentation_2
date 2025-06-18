@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>瑞吉教育 | 幼小衔接家长发布会</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            color: #343a40;
+            line-height: 1.8;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(120deg, #1e5799, #2989d8, #207cca);
+            color: white;
+            border-radius: 0 0 20px 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><circle cx="10" cy="10" r="8" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="30" r="15" fill="rgba(255,255,255,0.1)"/><circle cx="90" cy="80" r="10" fill="rgba(255,255,255,0.1)"/></svg>');
+            background-size: 100% 100%;
+            opacity: 0.3;
+        }
+        
+        .logo {
+            width: 120px;
+            height: 120px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .logo i {
+            font-size: 60px;
+            color: #2989d8;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .subtitle {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .theme {
+            background: rgba(255, 255, 255, 0.2);
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-top: 20px;
+            backdrop-filter: blur(5px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .content-card {
+            background: white;
+            border-radius: 18px;
+            padding: 35px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .content-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+        }
+        
+        .content-card h2 {
+            color: #1e5799;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #3498db;
+            display: flex;
+            align-items: center;
+            font-size: 1.8rem;
+        }
+        
+        .content-card h2 i {
+            margin-right: 15px;
+            background: #e3f2fd;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2989d8;
+        }
+        
+        .intro {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #495057;
+            line-height: 1.8;
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .tools-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        
+        .tool-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid #e9ecef;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .tool-card::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+        }
+        
+        .tool-card:nth-child(1)::after {
+            background: linear-gradient(90deg, #ff9a9e, #fad0c4);
+        }
+        
+        .tool-card:nth-child(2)::after {
+            background: linear-gradient(90deg, #a1c4fd, #c2e9fb);
+        }
+        
+        .tool-card:nth-child(3)::after {
+            background: linear-gradient(90deg, #d4fc79, #96e6a1);
+        }
+        
+        .tool-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 36px;
+            color: white;
+        }
+        
+        .tool-card:nth-child(1) .tool-icon {
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+        }
+        
+        .tool-card:nth-child(2) .tool-icon {
+            background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+        }
+        
+        .tool-card:nth-child(3) .tool-icon {
+            background: linear-gradient(135deg, #d4fc79, #96e6a1);
+        }
+        
+        .tool-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        
+        .tool-card p {
+            color: #6c757d;
+            margin-bottom: 15px;
+        }
+        
+        .highlight {
+            background: #e3f2fd;
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-weight: 600;
+            color: #1a73e8;
+        }
+        
+        .problem-section {
+            background: #fff8e1;
+            border-left: 4px solid #ffc107;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+        
+        .solution-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .solution-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            border-top: 5px solid;
+        }
+        
+        .solution-card:nth-child(1) {
+            border-top-color: #4caf50;
+        }
+        
+        .solution-card:nth-child(2) {
+            border-top-color: #2196f3;
+        }
+        
+        .solution-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .solution-card h3 i {
+            margin-right: 10px;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        
+        .solution-card:nth-child(1) h3 i {
+            background: #4caf50;
+        }
+        
+        .solution-card:nth-child(2) h3 i {
+            background: #2196f3;
+        }
+        
+        .solution-card ul {
+            padding-left: 25px;
+            margin: 20px 0;
+        }
+        
+        .solution-card li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+        
+        .solution-card li::before {
+            content: "✓";
+            position: absolute;
+            left: -25px;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        
+        .solution-card:nth-child(1) li::before {
+            background: #e8f5e9;
+            color: #4caf50;
+        }
+        
+        .solution-card:nth-child(2) li::before {
+            background: #e3f2fd;
+            color: #2196f3;
+        }
+        
+        .subject-section {
+            margin: 50px 0;
+        }
+        
+        .subject-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e9ecef;
+        }
+        
+        .subject-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            font-size: 32px;
+            color: white;
+        }
+        
+        .chinese .subject-icon {
+            background: linear-gradient(135deg, #e53935, #e35d5b);
+        }
+        
+        .math .subject-icon {
+            background: linear-gradient(135deg, #1e88e5, #64b5f6);
+        }
+        
+        .english .subject-icon {
+            background: linear-gradient(135deg, #43a047, #66bb6a);
+        }
+        
+        .subject-header h2 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+        }
+        
+        .table-container {
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        th {
+            background: #1e5799;
+            color: white;
+            padding: 16px;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 15px;
+            border: 1px solid #e9ecef;
+            text-align: center;
+        }
+        
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .layer-model {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin: 40px 0;
+        }
+        
+        .layer-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            border-top: 4px solid;
+            transition: all 0.3s ease;
+        }
+        
+        .layer-card:hover {
+            transform: translateY(-8px);
+        }
+        
+        .layer-card:nth-child(1) {
+            border-top-color: #4caf50;
+        }
+        
+        .layer-card:nth-child(2) {
+            border-top-color: #2196f3;
+        }
+        
+        .layer-card:nth-child(3) {
+            border-top-color: #ff9800;
+        }
+        
+        .layer-card:nth-child(4) {
+            border-top-color: #9c27b0;
+        }
+        
+        .layer-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        
+        .layer-card p {
+            color: #6c757d;
+            font-size: 0.95rem;
+        }
+        
+        .upgrade-list {
+            margin: 30px 0;
+            padding-left: 30px;
+        }
+        
+        .upgrade-list li {
+            margin-bottom: 20px;
+            padding-left: 35px;
+            position: relative;
+        }
+        
+        .upgrade-list li::before {
+            content: "◆";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #1e5799;
+            font-size: 20px;
+        }
+        
+        .conclusion {
+            background: linear-gradient(120deg, #1e5799, #2989d8);
+            color: white;
+            padding: 50px;
+            border-radius: 20px;
+            text-align: center;
+            margin: 60px 0 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .conclusion::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 Q50,30 100,0 L100,100 Q50,70 0,100 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+            background-size: 100% 100%;
+            opacity: 0.5;
+        }
+        
+        .conclusion h2 {
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            color: white;
+        }
+        
+        .conclusion p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #1e5799;
+            padding: 16px 45px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 30px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+            background: #f8f9fa;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #6c757d;
+            font-size: 1rem;
+            border-top: 1px solid #e9ecef;
+            margin-top: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            .tools-container, .solution-cards, .layer-model {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .theme {
+                font-size: 1.1rem;
+                padding: 12px 25px;
+            }
+            
+            .content-card {
+                padding: 25px 15px;
+            }
+            
+            .conclusion {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h1>瑞吉教育家长发布会</h1>
+            <p class="subtitle">让过去所学真正"活"起来，为成长筑牢"向下扎根，向上生长"根基</p>
+            <div class="theme">幼小衔接暑期解决方案</div>
+        </header>
+        
+        <div class="content-card">
+            <h2><i class="fas fa-microphone-alt"></i> 尊敬的各位家长</h2>
+            <p class="intro">晚上好！首先非常感谢大家今天的出席。我是瑞吉小学部的小爱老师。今天我们一起来聊一下，站在幼儿园毕业到小学一年级的路口，未来的2-3个月期间孩子和整个家庭都将面临一个全新的小学课程安排和时间表，应该怎么去重新安排孩子的一天？暑假期间我们又能做些什么去帮助孩子过渡呢？</p>
+            
+            <h3 style="color: #2c3e50; margin-bottom: 20px; display: flex; align-items: center;">
+                <i class="fas fa-lightbulb" style="background: #fff8e1; color: #ffc107; margin-right: 15px;"></i>
+                答案就在这些工具中
+            </h3>
+            
+            <div class="tools-container">
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>电子计时器</h3>
+                    <p>教会孩子把<span class="highlight">"写作业好累"</span>变成<span class="highlight">"先专注30分钟，再休息10分钟"</span>的清晰目标</p>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>错题本</h3>
+                    <p>记录的不是错误，而是孩子从<span class="highlight">"这道题又错了"</span>到<span class="highlight">"举一反三"</span>的蜕变</p>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>习惯养成表</h3>
+                    <p>上面贴满的星星贴纸，正在把<span class="highlight">"妈妈催我学"</span>变成<span class="highlight">"我自己想打卡"</span>的主动自觉</p>
+                </div>
+            </div>
+            
+            <div style="background: #e3f2fd; padding: 25px; border-radius: 15px; margin: 40px 0;">
+                <h3 style="color: #1e5799; margin-bottom: 20px; display: flex; align-items: center;">
+                    <i class="fas fa-gem" style="background: #bbdefb; color: #1e5799; margin-right: 15px;"></i>
+                    幼小衔接的核心真相
+                </h3>
+                <p style="font-size: 1.2rem; line-height: 1.8;">
+                    这些工具揭示了一个真相：幼小衔接的核心，是帮助孩子完成从<span class="highlight">"被照顾者"</span>到<span class="highlight">"自主管理者"</span>的角色蜕变。孩子根据计时器的数字来控制自己的任务完成时间、用错题本来归纳和总结经验、借助习惯养成表来激励自己进步，这些都是帮助孩子在自己管理自己。
+                </p>
+            </div>
+            
+            <div class="problem-section">
+                <h3 style="color: #2c3e50; margin-bottom: 20px; display: flex; align-items: center;">
+                    <i class="fas fa-exclamation-triangle" style="color: #ffc107; margin-right: 15px;"></i>
+                    但工具就足够了吗？
+                </h3>
+                <p style="font-size: 1.1rem; line-height: 1.8;">
+                    那些花花绿绿的计时器、卡通版的任务打卡表，或许能让孩子在头三天眼睛发亮地喊"我要自己安排时间"，可到了第四天，当新鲜劲儿一过，计时器大概率会被丢进抽屉吃灰，任务清单也只会沦为家长手机里的"电子废纸"。更让人揪心的是，暑假整整两个月，没了规律的在校节奏，孩子早上赖床到十点，下午抱着平板刷动画，握笔的手慢慢生了疏，整整幼儿园最后一年班主任给孩子交教会的拼音、加减法、自然拼读、书写习惯等都还给了老师......不正是咱们最担心的<span class="highlight">"暑假滑坡"</span>吗？
+                </p>
+            </div>
+            
+            <div style="text-align: center; margin: 40px 0;">
+                <h3 style="font-size: 1.6rem; color: #e53935; background: #ffebee; display: inline-block; padding: 15px 40px; border-radius: 50px; border: 2px dashed #e53935;">
+                    既然工具撑不起真正的成长，总不能眼睁睁看着孩子在暑假两个月里"退步回原点"吧？
+                </h3>
+            </div>
+            
+            <h2 style="color: #2c3e50; margin: 50px 0 30px; text-align: center; font-size: 1.8rem;">
+                <i class="fas fa-check-circle" style="color: #4caf50; margin-right: 15px;"></i>
+                幼小衔接要帮孩子真正"长本事"
+            </h2>
+            
+            <div class="solution-cards">
+                <div class="solution-card">
+                    <h3><i class="fas fa-ruler-combined"></i> 1. 有规律的习惯锻造</h3>
+                    <p>在家中每天按照小学的课程表时间来规划每天的暑假作息，尤其是40分钟的不间断课堂学习时间，重点落实三方面：</p>
+                    <ul>
+                        <li><strong>作息规律化：</strong>参考小学作息调整起床、学习、休息时间，避免开学后精神涣散</li>
+                        <li><strong>40分钟专注力训练：</strong>通过定时阅读、拼图或棋类游戏，逐步延长专注时长，减少外界干扰</li>
+                        <li><strong>自理能力强化：</strong>独立整理书包、管理学习用品，提前适应课间自主如厕、喝水等需求</li>
+                    </ul>
+                </div>
+                
+                <div class="solution-card">
+                    <h3><i class="fas fa-brain"></i> 2. 知识灵活运用</h3>
+                    <p>针对本学期老师所教的幼小衔接知识点进行分类和复习，并通过趣味游戏或生活场景强化记忆：</p>
+                    <ul>
+                        <li>购物时认字、分水果学计算等生活场景应用</li>
+                        <li>激发孩子的学习兴趣和自驱力</li>
+                        <li>培养能陪孩子走得更远的底层能力</li>
+                    </ul>
+                    <div style="background: #e3f2fd; padding: 20px; border-radius: 12px; margin-top: 20px;">
+                        <p style="font-style: italic; color: #1e5799; font-weight: 500;">
+                            "这才是瑞吉幼小衔接暑假班的初心。我们不做'临时抱佛脚'的冲刺班，而是用暑假50天的时间，帮助孩子将幼儿园的已学知识进行转化，真正实现'向下扎根，向上生长'的长期目标。"
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin: 50px 0 30px; padding: 30px; background: #f8f9fa; border-radius: 15px; border: 2px solid #e9ecef;">
+                <h3 style="font-size: 1.6rem; color: #2c3e50; margin-bottom: 25px;">
+                    <i class="fas fa-gem" style="color: #ff9800;"></i>
+                    30年教育实践验证的真相
+                </h3>
+                <p style="font-size: 1.8rem; color: #e53935; font-weight: bold; line-height: 1.4;">
+                    小学一年级淘汰的不是知识储备，而是三个底层能力的较量：<br>
+                    <span style="color: #1e5799;">"坐得住"的专注力</span> · 
+                    <span style="color: #4caf50;">"管得住"的自控力</span> · 
+                    <span style="color: #9c27b0;">"学得会"的运用力</span>
+                </p>
+            </div>
+        </div>
+        
+        <div class="subject-section chinese">
+            <div class="subject-header">
+                <div class="subject-icon">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <h2>语文能力四维提升</h2>
+            </div>
+            
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>输入/输出维度</th>
+                            <th>听</th>
+                            <th>说</th>
+                            <th>读</th>
+                            <th>写</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>一个字</strong></td>
+                            <td>声调发音（单字发音辨析）</td>
+                            <td>组词造句（机械组词）</td>
+                            <td>拼音（字、词）</td>
+                            <td>汉字结构格式书写（认读）</td>
+                        </tr>
+                        <tr>
+                            <td><strong>一张图</strong></td>
+                            <td>看图听故事（图片辅助故事倾听）</td>
+                            <td>描述图片沟通会话（完成描述图片）</td>
+                            <td>图片要素分解图片情景联想（句）</td>
+                            <td>描红（再模仿）</td>
+                        </tr>
+                        <tr>
+                            <td><strong>一段话</strong></td>
+                            <td>听觉专注解析记忆（段落细节捕捉）</td>
+                            <td>信息补全语言组织（故事接龙复述）</td>
+                            <td>语法符号概括复述（段）</td>
+                            <td>语法符号书写短句（后创造）</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="subject-section math">
+            <div class="subject-header">
+                <div class="subject-icon">
+                    <i class="fas fa-calculator"></i>
+                </div>
+                <h2>数学四层能力模型</h2>
+            </div>
+            
+            <div class="layer-model">
+                <div class="layer-card">
+                    <h4>第一层：知识点基础</h4>
+                    <p>掌握基本运算和概念（如20以内加减法、图形识别）</p>
+                </div>
+                <div class="layer-card">
+                    <h4>第二层：经验规律的总结</h4>
+                    <p>学会归纳规律（如"加法交换律""乘法分配律"的总结）</p>
+                </div>
+                <div class="layer-card">
+                    <h4>第三层：知识应用与深化</h4>
+                    <p>举一反三（如用"画线段图"解决不同类型的应用题）</p>
+                </div>
+                <div class="layer-card">
+                    <h4>第四层：举一反三善变通</h4>
+                    <p>融会贯通（用数学思维解决生活问题，比如"如何用最少的钱买文具"）</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="subject-section english">
+            <div class="subject-header">
+                <div class="subject-icon">
+                    <i class="fas fa-language"></i>
+                </div>
+                <h2>英语课程两大升级</h2>
+            </div>
+            
+            <ol class="upgrade-list">
+                <li>
+                    <h3>场景化互动教学</h3>
+                    <p>继续沿用广受家长认可的《国家地理Look》教材，但更注重"情景还原"——比如围绕"餐厅点餐""公园游玩""校园生活"等真实场景主题，设计角色扮演、小组对话、情景短剧等活动，让孩子在"用英语解决问题"的过程中自然输出。</p>
+                </li>
+                <li>
+                    <h3>分层能力锚定</h3>
+                    <p>依据孩子现有水平动态分阶（基础夯实/能力跃升），针对性强化"听-说-应"链路——基础组通过高频词句跟读、情景问答的框架，进阶组则融入思维导图复述、创意故事编演，重点培养"信息抓取-逻辑重组-观点输出"的语言内化能力，让每个孩子都能在适配的节奏中实现"听得懂、接得上、说得出"。</p>
+                </li>
+            </ol>
+        </div>
+        
+        <div class="conclusion">
+            <h2>50天很短，但足够让改变发生</h2>
+            <p>
+                这个暑假，瑞吉会成为孩子成长路上的"脚手架"——不是替您"盯着孩子吃饭睡觉"，而是用30年沉淀的教育智慧和这3年间对孩子的了解，帮孩子从"被照顾"变成"我能行"；不是用工具硬撑"假自律"，而是通过小班精品的精准陪伴，让习惯成自然、知识真正"活"起来。
+            </p>
+            <a href="#" class="cta-button">立即预约暑期班名额</a>
+        </div>
+        
+        <footer>
+            <p>© 2025 瑞吉教育 - 专业幼小衔接教育机构 | 咨询电话：400-123-4567</p>
+            <p>地址：上海市浦东新区教育路88号瑞吉教育中心 | 官网：www.ruiji-edu.com</p>
+        </footer>
+    </div>
+</body>
+</html>
